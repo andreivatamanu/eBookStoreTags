@@ -65,18 +65,18 @@ public class MySelect extends SimpleTagSupport implements ResultSet {
 
             Statement statement;
             Connection connection;
+            List<String> row = null;
+
+            rows = new ArrayList<>();
 
             StringWriter stringWriter = new StringWriter();
-
+            String query = stringWriter.getBuffer().toString();
             // ========================================================================================================================
             JspFragment f = getJspBody();
             if (f != null) {
                 f.invoke(stringWriter);
             }
             // ========================================================================================================================
-
-            String query = stringWriter.getBuffer().toString();
-            rows = new ArrayList<>();
 
             try {
 
@@ -85,10 +85,18 @@ public class MySelect extends SimpleTagSupport implements ResultSet {
 
                 resultSetDb = statement.executeQuery(query);
 
+                ResultSetMetaData metadata = resultSetDb.getMetaData();
+                int numberOfColumns = metadata.getColumnCount();
+
                 while (resultSetDb.next()) {
 
-                    
-                    
+                    for (int column = 1; column < numberOfColumns; column++) {
+
+                        row = new ArrayList<>();
+                        row.add(resultSetDb.getString(column));
+                    }
+
+                    rows.add(row);
                 }
 
                 getJspContext().setAttribute(resultSet, this, PageContext.SESSION_SCOPE);
