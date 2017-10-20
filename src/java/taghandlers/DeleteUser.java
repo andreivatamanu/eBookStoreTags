@@ -37,9 +37,9 @@ public class DeleteUser extends SimpleTagSupport {
     public void doTag() throws JspException {
         JspWriter out = getJspContext().getOut();
 
-        String dbUser = "CIPRIAN";
-        String dbPassword = "sargeras01";
-        String url = "jdbc:derby://localhost:1527/EBOOKS;create=true;";
+        String dbUser = "andrei";
+        String dbPassword = "andrei";
+        String url = "jdbc:derby://localhost:1527/eBookStore;create=true;";
         String driver = "org.apache.derby.jdbc.ClientDriver";
 
         PreparedStatement pstmnt = null;

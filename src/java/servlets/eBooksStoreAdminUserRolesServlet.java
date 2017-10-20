@@ -42,7 +42,7 @@ public class eBooksStoreAdminUserRolesServlet extends HttpServlet {
             // declare specific DB info
             String user = "test" ;
             String password = "test";
-            String url = "jdbc:derby://localhost:1527/ebooksstore;create=true;";
+            String url = "jdbc:derby://localhost:1527/eBookStore;create=true;";
             String driver = "org.apache.derby.jdbc.ClientDriver"; 
             // check push on Insert button
             if (request.getParameter("admin_user_roles_insert") != null) { // insert values from fields

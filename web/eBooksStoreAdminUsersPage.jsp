@@ -63,9 +63,9 @@
                     <sql:setDataSource 
                         var="snapshot" 
                         driver="org.apache.derby.jdbc.ClientDriver40"
-                        url="jdbc:derby://localhost:1527/EBOOKS;create=true;"
-                        user="CIPRIAN"  
-                        password="sargeras01"/>
+                        url="jdbc:derby://localhost:1527/eBookStore;create=true;"
+                        user="andrei"  
+                        password="andrei"/>
                     <sql:query dataSource="${snapshot}" var="result">
                         SELECT EBOOKS.USERS.SSN, EBOOKS.USERS."NAME", EBOOKS.USERS.PASSWORD, EBOOKS.USERS."ROLE" 
                         FROM EBOOKS.USERS, EBOOKS.ROLES 

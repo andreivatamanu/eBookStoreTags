@@ -57,9 +57,9 @@ public class eBooksStoreAdminUsersServlet extends HttpServlet {
 
         try {
 
-            user = "CIPRIAN";
-            password = "sargeras01";
-            url = "jdbc:derby://localhost:1527/EBOOKS;create=true;";
+            user = "andrei";
+            password = "andrei";
+            url = "jdbc:derby://localhost:1527/eBookStore;create=true;";
             driver = "org.apache.derby.jdbc.ClientDriver";
 
             Class driverClass = Class.forName(driver);

@@ -43,9 +43,9 @@ public class eBooksStoreAdminEBooks extends HttpServlet {
 
 // ============================= DB SETUP ========================================================================================================
         // declare specific DB info
-        String user = "CIPRIAN";
-        String password = "sargeras01";
-        String url = "jdbc:derby://localhost:1527/EBOOKS;create=true;";
+        String user = "andrei";
+        String password = "andrei";
+        String url = "jdbc:derby://localhost:1527/eBookStore;create=true;";
         String driver = "org.apache.derby.jdbc.ClientDriver";
 
 // ============================= INSERT ========================================================================================================

@@ -43,9 +43,9 @@
                     <cip:MyConnection
                         myConnection="snapshot" 
                         driver="org.apache.derby.jdbc.ClientDriver40"
-                        url="jdbc:derby://localhost:1527/EBOOKS;create=true;"
-                        username="CIPRIAN"  
-                        password="sargeras01"/>
+                        url="jdbc:derby://localhost:1527/eBookStore;create=true;"
+                        username="andrei"  
+                        password="andrei"/>
                     
                     
                     <cip:MySelect dataSource="${snapshot}" resultSet="result">

@@ -27,9 +27,9 @@
                         <sql:setDataSource 
                         var="snapshot" 
                         driver="org.apache.derby.jdbc.ClientDriver40"
-                        url="jdbc:derby://localhost:1527/EBOOKS;create=true;"
-                        user="CIPRIAN"  
-                        password="sargeras01"/>
+                        url="jdbc:derby://localhost:1527/eBookStore;create=true;"
+                        user="andrei"  
+                        password="andrei"/>
                         <sql:query dataSource="${snapshot}" var="result">
                             SELECT ROLE from EBOOKS.ROLES ORDER BY ROLE ASC 
                         </sql:query>
